@@ -36,9 +36,8 @@ def test_find_player
   assert_equal("3", team.find_player("3"))
 end
 
-def points
-  team = Team.new("whatever", ["1", "2", "3"], "timmy")
-  assert_equals(1, team.points )
-end
-
+def test_points
+  team = Team.new("whatever", ["1", "2", "3"], "timmy", 0)
+  team.points("win")
+  assert_equal(1, team.points("win"))
 end

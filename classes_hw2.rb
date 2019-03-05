@@ -23,11 +23,9 @@ class Team
   end
 end
 
-def points
-  @points = 0
-  "Are you a winner?"
-  win = gets.chomp
-  if win == "yes"
+def points(win_state)
+  if win_state == "win"
     @points += 1
   end
+  return @points
 end
